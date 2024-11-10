@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng sinh nhật bé iuuuu</title>
+    <style>
+        body {
+            margin: 100px 0px;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffefc5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            overflow-y: scroll;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            font-size: 2em;
+            margin-top: 0;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            font-size: 1.4em;
+            color: #c82828;
+            margin-top: 20px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            width: 50px;
+            height: 70px;
+            background-color: red;
+            border-radius: 50% 50% 50% 50%;
+            opacity: 0.8;
+            animation: float 8s ease-in infinite;
+        }
+
+        .red { background-color: #ff4b5c; }
+        .blue { background-color: #4b7bec; }
+        .yellow { background-color: #ffe347; }
+        .green { background-color: #4cd137; }
+        .purple { background-color: #9b59b6; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.9;
+            }
+            50% {
+                transform: translateY(-50vh) rotate(10deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-10deg);
+                opacity: 0.8;
+            }
+        }
+
+        .cake {
+            width: 150px;
+            margin-top: 20px;
+            animation: bounce 1.5s infinite;
+        }
+
+        img {
+            border-radius: 5px;
+        }   
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chúc mừng sinh nhật bé Thảo iuuuu ♡</h1>
+        <p>Anh mong rằng mọi niềm vui, hạnh phúc và nhiều thành công sẽ đến với em (≧◡≦). Anh sẽ luôn ở bên, cùng em vượt qua mọi thử thách, chia sẻ những khoảnh khắc và bên em trên con đường sau này ⊂( ´ ▽ ` )⊃</p>
+        <p>Chúc Thảo iuu dấu tuổi 17 tràn đầy năng lượng, luôn khỏe mạnh và yêu đời hơn, đặc biệt lúc nào cũng cười vì anh thích lúc em cười ( ´ ꒳ ` ) . Hy vọng rằng mọi điều tốt đẹp nhất sẽ luôn đến với em, không chỉ hôm nay mà là suốt cả cuộc đời ♡♡♡</p>
+        <p class="heart">&#128149; iuu bé nhìuuu ♡＼(￣▽￣)／♡</p>
+        <img src="IMG_2537.JPG" alt="Happy Birthday Cake" class="cake">
+
+        <script>
+            const colors = ['red', 'blue', 'yellow', 'green', 'purple'];
+            
+            for (let i = 0; i < 30; i++) {
+                const balloon = document.createElement("div");
+                balloon.classList.add("balloon");
+    
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                balloon.classList.add(color);
+    
+                balloon.style.left = Math.random() * 100 + "vw";
+    
+                const size = Math.random() * 30 + 40;
+                balloon.style.width = size + "px";
+                balloon.style.height = size * 1.2 + "px";
+    
+                balloon.style.animationDuration = Math.random() * 3 + 5 + "s";
+                balloon.style.animationDelay = Math.random() * 3 + "s";
+    
+                document.body.appendChild(balloon);
+            }
+        </script>
+
+    </div>
+</body>
+</html>
